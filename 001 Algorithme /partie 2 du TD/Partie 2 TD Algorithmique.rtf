@@ -1,0 +1,649 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1036{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset1 Cambria Math;}{\f2\fnil\fcharset0 Cambria Math;}{\f3\fnil Cambria Math;}}
+{\*\generator Riched20 10.0.19041}{\*\mmathPr\mmathFont1\mwrapIndent1440 }\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang12 Partie 2 TD Algorithmique\par
+Algorithme EXO1\par
+Variables \par
+R1, R2, R3, RS\'e9rie, Rparall\'e9le, n: R\'e9el\par
+D\'e9but\par
+Ecrire('Entrez les trois r\'e9istances')\par
+Lire(R1, R2, R3)\par
+Ecrire('Entrez la valeur 1 pour calculer la r\'e9sistance en s\'e9rie, et 2 pour calculer la r\'e9sistance parall\'e8le')\par
+Lire(n)\par
+Si n=1 alors\par
+\tab RS\'e9rie\f1\u8592?\f0\lang1036 R1+R2+R3\par
+\lang12\tab Ecrire('La r\'e9sistance en s\'e9rie est: ',RS\'e9rie)\par
+\tab Sinon\lang1036\par
+\lang12\tab\tab Si n=2 alors\lang1036\par
+\tab\tab Rparall\'e9le\f1\u8592?\f0\lang1036 (R1*R2*R3)/(R1*R2+R2*R3+R1*R3)\lang12\par
+\tab\tab Ecrire('La r\'e9sistance en parall\'e9le est de :' ,Rparall\'e9le)\par
+\tab\tab Sinon\par
+\tab\tab\tab Ecrire('Vous n'avez entr\'e9 ni 1, ni 2')\par
+\tab\tab Finsi\par
+Finsi\par
+Fin\par
+Algorithmique EXO2\par
+Variables \par
+a, b: Entier\par
+op: Caracr\'e8re\par
+D\'e9but\par
+Ecrire('Veuillez entrer la valeur de a puis de b en entier')\par
+Lire(a, b)\par
+Ecrire('Quelle op\'e9ration souhaitez vous effectuer? + - / ou *')\par
+Lire(op)\par
+Si op='+' alors \par
+Ecrire('Le r\'e9sultat de l'op\'e9ration est de: ',a+b)\par
+Sinon\par
+\tab Si op='-' alors \par
+\tab Ecrire('Le r\'e9sultat de l'op\'e9ration est de: ',a-b)\par
+\tab Sinon\par
+\tab\tab Si op='*' alors \par
+\tab\tab Ecrire('Le r\'e9sultat de l'op\'e9ration est de: ',a*b)\par
+\tab\tab Sinon\par
+\tab\tab\tab Si op='/'\par
+\tab\tab\tab\tab Si b=0 alors\par
+\tab\tab\tab\tab Ecrire('La division par 0 est impossible')\par
+\tab\tab\tab\tab Finsi\par
+\tab\tab\tab Ecrire('Le r\'e9sultat de l'op\'e9ration est: ' ,a/b)\tab\par
+\tab\tab\tab Finsi\par
+\tab\tab Finsi\par
+\tab Finsi\par
+Finsi\par
+Fin\par
+Algorithme EXO3\par
+Variables \par
+a, b: R\'e9el\par
+D\'e9but\par
+Ecrire('Nous allons \'e9crire un algorithme qui permet de r\'e9soudre l'\'e9quation ax+b=0')\par
+Ecrire('Veuillez entrer les valeurs de a et b')\par
+Lire(a, b)\par
+Si a=0 ou b=0\par
+\tab Ecrire('Il n'y a pas de solution')\par
+\tab Sinon\par
+\tab\tab Ecrire('Le r\'e9sultat de l'\'e9quation est de: ' (-1*b)/a)\par
+Finsi\par
+Fin\par
+Algorithme EXO4\par
+Variables \par
+a, b, c, delta: R\'e9el\par
+D\'e9but \par
+Ecrire('Veuillez entrer les valeurs de a, b et c')\par
+Lire(a, b, c)\par
+delta\f1\u8592?\f2\lang1036 b*b-4*a*c\par
+Si delta=0 alors\par
+\tab Ecrire('La seule solution est: ' (-1*b)/(2*a))\par
+\tab Sinon\par
+\tab\tab Si delta\i <\i0 0 alors\par
+\tab\tab\tab Ecrire('Il n'y a pas de solution')\par
+\tab\tab\tab Sinon\par
+\tab\tab\tab\tab Ecrire('Les deux solutions sont: '(-1*b-RACINE(delta))/2*a, (-1*b+RACINE(delta))/2*a)\par
+\tab\tab Finsi\par
+\tab Finsi\par
+Fin\par
+Algorithme EXO5\par
+Variables\par
+n: Entier\par
+\f0\lang12 Ecrire('Quel jour souhaitez-vous afficher? de 1 \'e0 7')\par
+Lire(n)\par
+Si n=1 alors\par
+\tab Ecrire('Le jour correspondant est lundi ')\par
+\tab Sinon\par
+\tab\tab Si n=2 alors\par
+\tab\tab\tab Ecrire('Le jour correspondant est mardi ')\par
+\tab\tab\tab Sinon\par
+\tab\tab\tab\tab Si n=3 alors\par
+\tab\tab\tab\tab Ecrire('Le jour correspondant est mercredi ')\par
+\tab\tab\tab\tab Sinon\par
+\tab\tab\tab\tab\tab Si n=4 alors\par
+\tab\tab\tab\tab\tab Ecrire('Le jour correspondant est jeudi ')\par
+\tab\tab\tab\tab\tab Sinon\par
+\tab\tab\tab\tab\tab\tab Si n=5 alors\par
+\tab\tab\tab\tab\tab\tab Ecrire('Le jour correspondant est vendredi ')\par
+\tab\tab\tab\tab\tab\tab Sinon\par
+\tab\tab\tab\tab\tab\tab\tab Si n=6 alors\par
+\tab\tab\tab\tab\tab\tab\tab Ecrire('Le jour correspondant est \tab\tab\tab\tab\tab\tab\tab\tab\tab samedi')\par
+\tab\tab\tab\tab\tab\tab\tab Sinon\par
+\tab\tab\tab\tab\tab\tab\tab Ecrire('Le jour correspondant est \tab\tab\tab\tab\tab\tab\tab\tab\tab dimanche')\par
+\tab\tab\tab\tab\tab\tab\tab Finsi\par
+\tab\tab\tab\tab\tab\tab Finsi\par
+\tab\tab\tab\tab\tab Finsi\par
+\tab\tab\tab\tab Finsi\par
+\tab\tab Finsi\par
+Finsi\par
+Fin\par
+Avec primitive cas: \par
+Ecrire('Quel jour souhaitez-vous afficher? de 1 \'e0 7')\par
+Lire(n)\par
+Selon n faire\par
+\tab Cas 1: Ecrire('Le jour correspondant est Lundi')\par
+\tab Cas 2: Ecrire('Le jour correspondant est Mardi')\par
+\tab Cas 3: Ecrire('Le jour correspondant est Mercredi')\par
+\tab Cas 4: Ecrire('Le jour correspondant est Jeudi')\par
+\tab Cas 5: Ecrire('Le jour correspondant est Vendredi')\par
+\tab Cas 6: Ecrire('Le jour correspondant est Samedi')\par
+\tab Cas 7: Ecrire('Le jour correspondant est Dimanche')\par
+FinSelon\par
+Fin\par
+Algorithme EXO6\par
+Constantes\par
+20e, 10e, 5e, 2e, 1e, reste: Entier\par
+Variables\par
+montant: Variable\par
+D\'e9but\par
+Ecrire('Veuillez entrer le montant \'e0 convertir')\par
+Lire(montant)\par
+20e\f1\u8592?\f2\lang1036 entier(montant/20)\par
+\f0\lang12 reste\f1\u8592?\f2\lang1036 montant mod 20\par
+10e\f1\u8592?entier(reste/10)\par
+reste\u8592?reste mod 10\par
+5e\u8592?\f2\lang1036  entier(reste/5)\par
+reste\f1\u8592?reste mod 5\par
+2e\u8592?\f2\lang1036 entier(reste/2)\par
+reste\f1\u8592?reste mod 2\par
+1e\u8592?\f2\lang1036 reste\par
+Ecrire('Le montant obtenu peut \'eatre divis\'e9 comme suit: ',\f0\lang12 20e,' billets de 20 euros,' 10e,' billets de 10 euros,' 5e,' billets de 5 euros,' 2e,' billets de 2 euros,', 1e' billets de 1 euro'\f2\lang1036  )\f0\lang12\par
+Fin\par
+Algorithme EX07\par
+Variables\par
+A, B: Entier\par
+D\'e9but\par
+Ecrire('Veuillez entrer les valeurs de A puis de B')\par
+Lire(A, B)\par
+Si A\f2\lang1036 >B alors\par
+\tab Ecrire(B, A)\par
+\tab Ecrire(A, B)\par
+\tab Sinon\par
+\tab\tab Si A<B alors\par
+\tab\tab\tab Ecrire(A, B)\par
+\tab\tab\tab Ecrire(B, A)\par
+\tab\tab Finsi\par
+Finsi\par
+Fin\par
+Algorithme EXO8\par
+\f0\lang12 Variables\par
+A, B, C: Entier\par
+D\'e9but\par
+Ecrire('Veuillez entrer les valeurs de A puis de B et enfin de C. Nous afficherons par la suite ces valeurs dans l'ordre croissant puis d\'e9croissant')\par
+Lire(A, B, C)\par
+Selon A, B, C Faire\par
+\tab Cas A>B et B>C : Ecrire(C,B,A)\par
+\tab\tab\tab    Ecrire(A,B,C)\par
+\tab Cas A>C et C>B : Ecrire(B,C,A)\par
+\tab\tab\tab    Ecrire(A,C,B)\par
+\tab Cas B>A et A>C : Ecrire(C,A,B)\par
+\tab\tab\tab    Ecrire(B,A,C)\par
+\tab Cas B>C et C>A : Ecrire(A,C,B)\par
+\tab\tab\tab    Ecrire(B,C,A)\par
+\tab Cas C>A et A>B : Ecrire(B,A,C)\par
+\tab\tab\tab    Ecrire(C,A,B)\par
+\tab Cas C>B et B>A : Ecrire(A,B,C)\par
+\tab\tab\tab    Ecrire(B,C,A)\par
+Finselon\par
+Fin\par
+Algorithme EXO9\par
+Variables\par
+A, B, C: Entier\par
+D\'e9but\par
+Ecrire('Veuillez entrer les valeurs de A puis de B, de C et enfin de D. Nous afficherons par la suite ces valeurs dans l'ordre croissant puis d\'e9croissant')\par
+Lire(A, B, C, D)           \par
+Selon A, B, C, D Faire\par
+Cas A>B et B>C et C>D : Ecrire('DCBA')\par
+\tab\tab\tab Ecrire('ABCD')\par
+Cas A>C et C>B et B>D : Ecrire('DBCA')\par
+\tab\tab\tab Ecrire('ACBD')\par
+Cas C>A et A>B et B>D : Ecrire('DBAC')\par
+\tab\tab\tab Ecrire('CABD')\par
+Cas A>C et C>D et D>B : Ecrire('BDCA')\par
+\tab\tab\tab Ecrire('ACBD')\par
+Cas C>A et A>D et D>B : Ecrire('BDAC')\par
+\tab\tab\tab Ecrire('CADB')\par
+Cas C>D et D>A et A>B : Ecrire('BADC')\par
+\tab\tab\tab Ecrire('CDAB')\par
+Cas A>B et B>D et D>C : Ecrire('CDBA')\par
+\tab\tab\tab Ecrire('ABDC')\par
+Cas A>D et D>B et B>C : Ecrire('CBDA')\par
+\tab\tab\tab Ecrire('ADBC')\par
+Cas D>A et A>B et B>C : Ecrire('CBAD')\par
+\tab\tab\tab Ecrire('DABC')\par
+Cas A>D et D>C et C>B : Ecrire('BCDA')\par
+\tab\tab\tab Ecrire('ADCB')\par
+Cas D>A et A>C et C>B : Ecrire('BCAD')\par
+\tab\tab\tab Ecrire('DACB')\par
+Cas D>C et C>A et A>B : Ecrire('BACD')\par
+\tab\tab\tab Ecrire('DCAB')\par
+Cas B>A et A>C et C>D : Ecrire('DCAB')\par
+\tab\tab\tab Ecrire('BACD')\par
+Cas B>C et C>A et A>D : Ecrire('DACB')\par
+\tab\tab\tab Ecrire('BCAD')\par
+Cas C>B et B>A et A>D : Ecrire('DABC')\par
+\tab\tab\tab Ecrire('CBAD')\par
+Cas B>C et C>D et D>A : Ecrire('ADCB')\par
+\tab\tab\tab Ecrire('BCDA')\par
+Cas C>B et B>D et D>A : Ecrire('ADBC')\par
+\tab\tab\tab Ecrire('CBDA')\par
+Cas C>D et D>B et B>A : Ecrire('ABDC')\par
+\tab\tab\tab Ecrire('CDBA')\par
+Cas B>A et A>D et D>C : Ecrire('CDAB')\par
+\tab\tab\tab Ecrire('BADC')\par
+Cas B>D et D>A et A>C : Ecrire('CADB')\par
+\tab\tab\tab Ecrire('BDAC')\par
+Cas D>B et B>A et A>C : Ecrire('CABD')\par
+\tab\tab\tab Ecrire('DBAC')\par
+Cas B>D et D>C et C>A : Ecrire('ACDB')\par
+\tab\tab\tab Ecrire('BDCA')\par
+Cas D>B et B>C et C>A : Ecrire('ACBD')\par
+\tab\tab\tab Ecrire('DBCA')\par
+Cas D>C et C>B et B>A : Ecrire('ABCD')\par
+\tab\tab\tab Ecrire('DCBA')\par
+Finselon\par
+Fin\par
+\tab Algorithme EXO10\par
+Variables\par
+ann\'e9e: Entier\par
+D\'e9but\par
+Ecrire('Veuillez entrer l'ann\'e9e')\par
+Lire(ann\'e9e)\par
+Si ann\'e9e mod 4 <>0 alors\par
+\tab Ecrire('L'ann\'e9e n'est pas bissextile')\par
+\tab Sinon\par
+\tab\tab Si ann\'e9e mod 100 = 0 alors\par
+\tab\tab\tab Si ann\'e9e mod 400 =0 alors\par
+\tab\tab\tab Ecrire('L'ann\'e9e est bissextile')\par
+\tab\tab\tab Finsi\par
+\tab\tab Sinon\par
+\tab\tab Ecrire('L'ann\'e9e n'est pas bissextile')\par
+\tab\tab Finsi\par
+Finsi\par
+Fin\par
+Algorithme EXO11\par
+Variables\par
+an, mois: Entier\par
+D\'e9but\par
+Ecrire('Veuillez entrer l'ann\'e9e et le mois dans le format suivant: mm aaaa')\par
+Lire (mois, an)\par
+SI an mod 4 <>0 alors \par
+\tab Si mois = 2 alors\par
+\tab\tab Ecrire('Le nombre de jours dans ce mois est : 28')\par
+\tab Finsi\par
+Sinon\par
+\tab Si an mod 100 <> 0 alors \par
+\tab\tab Si mois = 2 alors\par
+\tab\tab\tab Ecrire('Le nombre de jours dans ce mois est de 29')\par
+\tab\tab Finsi\par
+\tab Sinon\par
+\tab\tab Si an mod 400 = 0 alors\par
+\tab\tab\tab Si mois = 2 alors\par
+\tab\tab\tab\tab Ecrire('Le nombre de jours de ce mois est de 29')\par
+\tab\tab\tab Finsi\par
+\tab\tab Sinon\par
+\tab\tab\tab Si mois = 2 alors\par
+\tab\tab\tab\tab Ecrire('Le nombre de jours dans ce mois est: 28')\par
+\tab\tab\tab Finsi\par
+\tab\tab Finsi\par
+\tab Finsi\par
+Finsi\par
+Selon mois faire\par
+\tab Cas 1 ou 3 ou 5 ou 7 ou 8 ou 10 ou 12 : Ecrire('Le nombre de jours dans ce mois est: 31')\par
+\tab Cas  4 ou 6 ou 9 ou 11 : Ecrire('Le nombre de jours dans ce mois est: 30')\par
+Finselon\par
+Fin\par
+\par
+Algorithme EXO12\par
+Variables\par
+j, m, a: Entier\par
+D\'e9but\par
+Ecrire('Veuillez saisir la date dans le format suivant: jj mm aaaa ')\par
+Lire(j, m, a)\par
+Si j<1 ou m<1 ou a<1 ou j>31 ou m>12  alors\par
+\tab Ecrire('La date n'est pas valide')\par
+
+\pard\li720\sa200\sl276\slmult1 Sinon\par
+\tab Si m=2 et a mod 4 <> 0 et j>28 alors\par
+\tab\tab Ecrire('La date n'est pas valide')\par
+\tab Finsi\par
+\tab Si m=2 et a mod 4 = 0 et a mod 100 = 0 et a mod 400 = 0 et j > 29 alors\par
+\tab\tab Ecrire('La date n'est pas valide') \par
+\tab Finsi\par
+\tab Si m=2 et a mod 4 = 0 et a mod 100 = 0 et a mod 400 <> 0 et j > 28 alors\par
+ \tab\tab Ecrire('La date n'est pas valide')\par
+\tab Finsi\par
+
+\pard\sa200\sl276\slmult1 Finsi\par
+Si m=1 ou m=3 ou m=5 ou m=7 ou m=8 ou m=10 ou m=12 alors\par
+\tab Si j>31 alors\par
+\tab\tab Ecrire('La date n'est pas valide')\par
+ \tab Finsi\par
+Sinon\par
+\tab Si m=4 ou m=6 ou m=9 ou m=11 alors\par
+\tab\tab Si j>30 alors \tab\par
+\tab\tab\tab Ecrire('La date n'est pas valide')\par
+\tab\tab Finsi\par
+\tab Finsi\par
+Sinon\par
+\tab Ecrire('La date est valide')\par
+Finsi\par
+Fin\par
+ Algorithme EXO13\par
+Variables\par
+\f2\lang1036 j, m, a: Entier\par
+D\'e9but\par
+Ecrire('Entrez une date sous le format jj mm aaaa')\par
+Lire(j, m, a)\par
+\f0\lang12 Si j<1 ou m<1 ou a<1 ou j>31 ou m>12  alors\par
+\tab Ecrire('La date n'est pas valide')\par
+
+\pard\li720\sa200\sl276\slmult1 Sinon\par
+\tab Si m=2 et a mod 4 <> 0 et j>28 alors\par
+\tab\tab Ecrire('La date n'est pas valide')\par
+\tab Finsi\par
+\tab Si m=2 et a mod 4 = 0 et a mod 100 = 0 et a mod 400 = 0 et j > 29 alors\par
+\tab\tab Ecrire('La date n'est pas valide') \par
+\tab Finsi\par
+\tab Si m=2 et a mod 4 = 0 et a mod 100 = 0 et a mod 400 <> 0 et j > 28 alors\par
+ \tab\tab Ecrire('La date n'est pas valide')\par
+\tab Finsi\par
+
+\pard\sa200\sl276\slmult1 Finsi\par
+Si m=1 ou m=3 ou m=5 ou m=7 ou m=8 ou m=10 ou m=12 alors\par
+\tab Si j>31 alors\par
+\tab\tab Ecrire('La date n'est pas valide')\par
+ \tab Finsi\par
+Sinon\par
+\tab Si m=4 ou m=6 ou m=9 ou m=11 alors\par
+\tab\tab Si j>30 alors \tab\par
+\tab\tab\tab Ecrire('La date n'est pas valide')\par
+\tab\tab Finsi\par
+\tab Finsi\par
+\f2\lang1036 Finsi\par
+j\u8592?j+1\par
+Si j=32 et\f0\lang12  m=1 ou m=3 ou m=5 ou m=7 ou m=8 ou m=10 ou m=12 alors\f2\lang1036\par
+\tab j\u8592?1\par
+\tab m\u8592?m+1\par
+Sinon\par
+\tab Si j=31 et \f0\lang12 m=4 ou m=6 ou m=9 ou m=11 alors\par
+\tab\f2\lang1036 j\f1\u8592?1\par
+\tab m\u8592?m+1\par
+\f2\lang1036\tab Finsi\par
+\par
+\tab Si m=13 alors\par
+\tab\tab m\u8592?1\par
+\tab\tab a\u8592?a+1\par
+\tab Finsi\par
+Finsi\par
+Ecrire('Le jour suivant est: ',j, m, a)\par
+Fin\par
+Algorithme EXO14\par
+\f0\lang12 Variables\par
+\f2\lang1036 j, m, a: Entier\par
+D\'e9but\par
+Ecrire('Entrez une date sous le format jj mm aaaa')\par
+Lire(j, m, a)\par
+\f0\lang12 Si j<1 ou m<1 ou a<1 ou j>31 ou m>12  alors\par
+\tab Ecrire('La date n'est pas valide')\par
+
+\pard\li720\sa200\sl276\slmult1 Sinon\par
+\tab Si m=2 et a mod 4 <> 0 et j>28 alors\par
+\tab\tab Ecrire('La date n'est pas valide')\par
+\tab Finsi\par
+\tab Si m=2 et a mod 4 = 0 et a mod 100 = 0 et a mod 400 = 0 et j > 29 alors\par
+\tab\tab Ecrire('La date n'est pas valide') \par
+\tab Finsi\par
+\tab Si m=2 et a mod 4 = 0 et a mod 100 = 0 et a mod 400 <> 0 et j > 28 alors\par
+ \tab\tab Ecrire('La date n'est pas valide')\par
+\tab Finsi\par
+
+\pard\sa200\sl276\slmult1 Finsi\par
+\f2\lang1036 j=j-1\par
+Si j=0 alors\par
+\tab j\u8592?1\par
+\tab m\u8592?m-1\par
+\tab Si m=0 alors\par
+\tab\tab m\u8592?1\par
+\tab\tab a\u8592?a-1\par
+\tab\tab Si a\u8592?0 alors\par
+\tab\tab\tab Ecrire('Il n'y a pas de date pr\'e9c\'e9dente')\par
+\tab\tab Finsi\par
+\tab Finsi\par
+Finsi\par
+Ecrire('La date pr\'e9c\'e9dente est: ', j, m, a )\par
+Fin\par
+Algorithme EXO15\par
+\f0\lang12 Variables\par
+\f2\lang1036 j, m, a, n: Entier\par
+D\'e9but\par
+Ecrire('Entrez une date sous le format jj mm aaaa')\par
+Lire(j, m, a)\par
+\f0\lang12 Si j<1 ou m<1 ou a<1 ou j>31 ou m>12  alors\par
+\tab Ecrire('La date n'est pas valide')\par
+
+\pard\li720\sa200\sl276\slmult1 Sinon\par
+\tab Si m=2 et a mod 4 <> 0 et j>28 alors\par
+\tab\tab Ecrire('La date n'est pas valide')\par
+\tab Finsi\par
+\tab Si m=2 et a mod 4 = 0 et a mod 100 = 0 et a mod 400 = 0 et j > 29 alors\par
+\tab\tab Ecrire('La date n'est pas valide') \par
+\tab Finsi\par
+\tab Si m=2 et a mod 4 = 0 et a mod 100 = 0 et a mod 400 <> 0 et j > 28 alors\par
+ \tab\tab Ecrire('La date n'est pas valide')\par
+\tab Finsi\par
+
+\pard\sa200\sl276\slmult1 Finsi\par
+\par
+Si m=1 ou m=3 ou m=5 ou m=7 ou m=8 ou m=10 ou m=12 alors\par
+\tab Si j>31 alors\par
+\tab\tab Ecrire('La date n'est pas valide')\par
+ \tab Finsi\par
+Sinon\par
+\tab Si m=4 ou m=6 ou m=9 ou m=11 alors\par
+\tab\tab Si j>30 alors \tab\par
+\tab\tab\tab Ecrire('La date n'est pas valide')\par
+\tab\tab Finsi\par
+\tab Finsi\par
+\f2\lang1036 Finsi\par
+Ecrire('Entrez la date que vous avez besoin de connaitre')\par
+Lire (n)\par
+\par
+j\f1\u8592?j\f2\lang1036 -n\f1\par
+Si j\f2\lang1036 >\f1 32 et\f0\lang12  m=1 ou m=3 ou m=5 ou m=7 ou m=8 ou m=10 ou m=12 alors\f2\lang1036\par
+\tab j\f1\u8592?1\par
+\tab m\u8592?m+1\par
+Sinon\par
+\tab Si j\f2\lang1036 >\f1 31 et \f0\lang12 m=4 ou m=6 ou m=9 ou m=11 alors\par
+\tab\f2\lang1036 j\f1\u8592?1\par
+\tab m\u8592?m+1\par
+\f2\lang1036\tab Finsi\par
+\par
+\tab Si m=13 alors\par
+\tab\tab m\f1\u8592?1\par
+\tab\tab a\u8592?a+1\par
+\tab Finsi\par
+Finsi\par
+Ecrire('\f2\lang1036 La date qu'il fera dans 5 jours\f1  est: ',j, m, a)\par
+\f2\lang1036 Algorithme EXO16\par
+Variables\par
+\f0\lang12 Variables\par
+\f2\lang1036 j, m, a, n: Entier\par
+D\'e9but\par
+Ecrire('Entrez une date sous le format jj mm aaaa')\par
+Lire(j, m, a)\par
+\f0\lang12 Si j<1 ou m<1 ou a<1 ou j>31 ou m>12  alors\par
+\tab Ecrire('La date n'est pas valide')\par
+
+\pard\li720\sa200\sl276\slmult1 Sinon\par
+\tab Si m=2 et a mod 4 <> 0 et j>28 alors\par
+\tab\tab Ecrire('La date n'est pas valide')\par
+\tab Finsi\par
+\tab Si m=2 et a mod 4 = 0 et a mod 100 = 0 et a mod 400 = 0 et j > 29 alors\par
+\tab\tab Ecrire('La date n'est pas valide') \par
+\tab Finsi\par
+\tab Si m=2 et a mod 4 = 0 et a mod 100 = 0 et a mod 400 <> 0 et j > 28 alors\par
+ \tab\tab Ecrire('La date n'est pas valide')\par
+\tab Finsi\par
+
+\pard\sa200\sl276\slmult1 Finsi\par
+Si m=1 ou m=3 ou m=5 ou m=7 ou m=8 ou m=10 ou m=12 alors\par
+\tab Si j>31 alors\par
+\tab\tab Ecrire('La date n'est pas valide')\par
+ \tab Finsi\par
+Sinon\par
+\tab Si m=4 ou m=6 ou m=9 ou m=11 alors\par
+\tab\tab Si j>30 alors \tab\par
+\tab\tab\tab Ecrire('La date n'est pas valide')\par
+\tab\tab Finsi\par
+\tab Finsi\par
+\f2\lang1036 Finsi\par
+j\f1\u8592?j\f2\lang1036 -n\f3\par
+\f2 Si j<0 alors\par
+\tab j\f1\u8592?1\par
+\tab m\u8592?m-1\par
+\tab Si m=0 alors\par
+\tab\tab m\u8592?1\par
+\tab\tab a\u8592?a-1\par
+\tab\tab Si a\u8592?0 alors\par
+\tab\tab\tab Ecrire('Il n'y a pas de date pr\'e9c\'e9dente')\par
+\tab\tab Finsi\par
+\tab Finsi\par
+Finsi\par
+Ecrire('La date \f2\lang1036 qu'il fesait il y a ',n,'jours\f1  est: ', j, m, a )\par
+Fin\f2\lang1036\par
+Algorithme EXO17\par
+Variables \par
+qa, tn, aa, na, etu, etr, r: R\'e9el\par
+D\'e9but\par
+Ecrire('Quelle est la qualit\'e9 de la personne? aa pour ancien abonn\'e9, na pour nouvel abonn\'e9, etu pour \'e9tudiant et etr pour \'e9tranger') \par
+Lire(qa)\par
+Ecrire('Quel est le tarif normal d'abonnement?')\par
+Lire(tn)\par
+Selon qa faire\par
+\tab Cas qa=aa: r\f1\u8592?-0.15\par
+\tab Cas qa=na: r\u8592?\f2\lang1036 -0\par
+\tab Cas qa=etu: r\f1\u8592?\f2\lang1036 -0.2\par
+\tab Cas qa=etr: r\f1\u8592?\f2\lang1036 0.25\par
+Finselon\par
+Ecrire('Le prix \'e0 payer est de: ',tn+tn*r )\par
+Fin\par
+Algorithme EXO18 (dates)\par
+Variables\par
+ja, ma, aa, jb, mb, ab: Entier\par
+D\'e9but\par
+Ecrire('Veuillez entrer la premi\'e8re date sous le format jj mm aaaa')\par
+Lire(ja, ma, aa)\par
+Ecrire('Veuillez entrer la deuxi\'e8me date sous le format jj mm aaaa')\par
+Lire(jb, mb, ab)\par
+Si ab > aa alors\par
+\tab Ecrire('La deuxi\'e8me date est plus r\'e9cente que la premi\'e8re')\par
+\tab Sinon\par
+\tab\tab Si ab=aa alors\par
+\tab\tab\tab Si mb>ma alors\par
+\tab\tab\tab\tab\tab Ecrire('La deuxi\'e8me date est plus r\'e9cente que \par
+ \tab\tab\tab\tab\tab\tab la premi\'e8re')\par
+\tab\tab\tab Sinon\par
+\tab\tab\tab\tab Si mb= ma alors\par
+\tab\tab\tab\tab\tab Si jb>ja alors\par
+\tab\tab\tab\tab\tab\tab\tab Ecrire('La deuxi\'e8me date est \tab\tab\tab\tab\tab\tab\tab\tab\tab\tab plus r\'e9cente \'e0 la premi\'e8re')\par
+\tab\tab\tab\tab\tab\tab\tab Sinon\par
+\tab\tab\tab\tab\tab\tab\tab\tab Si ja=jb alors\par
+\tab\tab\tab\tab\tab\tab\tab\tab\tab Ecrire('Il s'agit de la \tab\tab\tab\tab\tab\tab\tab\tab\tab\tab\tab m\'eame date')\par
+\tab\tab\tab\tab\tab\tab\tab\tab Finsi\par
+\tab\tab\tab\tab\tab Finsi\par
+\tab\tab\tab\tab Finsi\par
+\tab\tab\tab Finsi\par
+\tab\tab Finsi\par
+\tab Sinon\par
+\tab\tab Ecrire('La premi\'e8re date est plus r\'e9cente que la deuxi\'e8me')\par
+Algorithme EXO19\par
+Variables\par
+s, h, mn, v, reste: Entier\par
+D\'e9but\par
+Ecrire('Veuillez entrer une valeur enti\'e8re')\par
+\f0\lang12 Lire(v)\par
+h\f1\u8592?\f2\lang1036 entier(v/3600)\par
+reste\f1\u8592?v mod 3600\par
+m\u8592?entier(reste/60)\par
+reste\u8592?reste mod 60\par
+s\u8592?reste\par
+Fin\par
+Algo EXO20\par
+Variables \par
+sexe, cm, kg, BMI: R\'e9el\par
+Ecrire('Veuillez saisir le sexe M/F, la taille en cm et le poids en kg')\par
+Lire(sexe, cm, kg)\par
+Si sexe=M alors \par
+\f0\lang12\tab Ecrire('Le poids id\'e9al est de: ' (cm-100)-(cm-150)/4 )\par
+\tab Sinon\par
+\tab\tab Si sexe=F alors\par
+\tab\tab Ecrire('Le poids id\'e9al est de: ' (cm-100)-(cm-120)/4 )\par
+\tab\tab\tab Sinon\par
+\tab\tab\tab Ecrire('Vous n'avez pas entr\'e9 une valeur valable pour sexe')\par
+\tab\tab Finsi\par
+Finsi\tab\par
+BMI\f1\u8592?\f0\lang12 kg/(cm*cm)\par
+Ecrire('L'indicateur d'ob\'e9sit\'e9 est: ', BMI )\par
+Selon BMI faire\par
+Cas BMI\f2\lang1036 >= 32 : Ecrire('Cette personne est malade')\par
+\f0\lang12 Cas BMI <= 27: \f2\lang1036 Ecrire('Cette personne est normale')\par
+\f0\lang12 Cas BMI\f2\lang1036 >27:\f0\lang12  \f2\lang1036 Ecrire('Cette personne est ob\'e8se')\par
+Finselon\par
+Fin\par
+Algorithme EXO21\par
+Variables \par
+n, u: Entier\par
+D\'e9but\par
+Ecrire('Veuillez entrer un entier')\par
+Lire(n)\par
+u=n%10\par
+\f0\lang12 Si u=0 alors\par
+\tab Ecrire('La division par 0 est impossible')\par
+\tab Sinon\par
+\tab\tab Selon u faire\par
+\tab\tab Cas n%u=0 : Ecrire('Le nombre est divisible par son chiffre d'unit\'e9')\par
+\tab\tab Cas n%u<>0 : Ecrire('Le nombre n'est pas divisible par son chiffre d'unit\'e9')\par
+\tab\tab Finselon\par
+Finsi\par
+Fin\par
+Algorithme EXO22\par
+Variables \par
+num: Entier\par
+D\'e9but\par
+Ecrire('Donnez le num\'e9ro de mois')\par
+Lire(num)\par
+Selon num faire\par
+Cas 12 ou 1 ou 2 :Ecrire('La saison correspondante est : hiver') \par
+Cas 3 ou 4 ou 5 : Ecrire('La saison correspondante est : printemps')\par
+Cas 6 ou 7 ou 8 : Ecrire('La saison correspondante est : \'e9t\'e9')\par
+Cas 9 ou 10 ou 11 : Ecrire('La saison correspondante est : automne') \par
+Finselon\par
+Fin\par
+Algorithme EXO23(dates)\par
+\f2\lang1036 Variables\par
+ja, ma, aa, jb, mb, ab: Entier\par
+D\'e9but\par
+Ecrire('Veuillez entrer la premi\'e8re date sous le format jj mm aaaa')\par
+Lire(ja, ma, aa)\par
+Ecrire('Veuillez entrer la deuxi\'e8me date sous le format jj mm aaaa')\par
+Lire(jb, mb, ab)\par
+Si ab > aa alors\par
+\tab Ecrire('La deuxi\'e8me date est plus r\'e9cente que la premi\'e8re')\par
+\tab Sinon\par
+\tab\tab Si ab=aa alors\par
+\tab\tab\tab Si mb>ma alors\par
+\tab\tab\tab\tab\tab Ecrire('La deuxi\'e8me date est plus r\'e9cente que \par
+ \tab\tab\tab\tab\tab\tab la premi\'e8re')\par
+\tab\tab\tab Sinon\par
+\tab\tab\tab\tab Si mb= ma alors\par
+\tab\tab\tab\tab\tab Si jb>ja alors\par
+\tab\tab\tab\tab\tab\tab\tab Ecrire('La deuxi\'e8me date est \tab\tab\tab\tab\tab\tab\tab\tab\tab\tab plus r\'e9cente \'e0 la premi\'e8re')\par
+\tab\tab\tab\tab\tab\tab\tab Sinon\par
+\tab\tab\tab\tab\tab\tab\tab\tab Si ja=jb alors\par
+\tab\tab\tab\tab\tab\tab\tab\tab\tab Ecrire('Il s'agit de la \tab\tab\tab\tab\tab\tab\tab\tab\tab\tab\tab m\'eame date')\par
+\tab\tab\tab\tab\tab\tab\tab\tab Finsi\par
+\tab\tab\tab\tab\tab Finsi\par
+\tab\tab\tab\tab Finsi\par
+\tab\tab\tab Finsi\par
+\tab\tab Finsi\par
+\tab Sinon\par
+\tab\tab Ecrire('La premi\'e8re date est plus r\'e9cente que la deuxi\'e8me')\par
+\f0\lang12  Finsi\par
+Fin\par
+\par
+}
+ 

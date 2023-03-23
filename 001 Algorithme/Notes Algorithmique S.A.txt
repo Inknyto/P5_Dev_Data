@@ -1,0 +1,16 @@
+Notes algorithmique S.A
+une liste est un tableau à une dimension. 
+args par défaut, args non défini
+diff param et args : création de fonct: args
+utilisation de fonct(ou appel): param.  
+Une procédure ne renvoie pas de valeur, contrairement à une fonction qui renvoie une valeur. 
+Python ne fait pas de différence entre une fonction et une procédure.
+Leur déclaration est donc la même 
+Le résultat d'une fonction doit être affectée à une variable. 
+une constante ne change pas au cours de l'execution
+langage typé? non typé? fortement typé?
+Etapes de résolution algo: 
+1: identifier les variables d'entrée, calculées et de sortie. 
+("calculeret afficher" implique qu'on n'a pas besoin de stocker les variables. au lieu de déclarer les variables de sortie
+A mettre dans le drive:
+fiche de suivi individuelle, dossier algo pour le trvail en algo, dossier veille pour mettre les veilles. 

@@ -1,0 +1,383 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1036{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset1 Cambria Math;}{\f2\fnil\fcharset0 Cambria Math;}{\f3\fnil Cambria Math;}{\f4\froman\fprq2\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.19041}{\*\mmathPr\mmathFont1\mwrapIndent1440 }\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang12 Partie 4 Td Algorithmique\par
+Algorithme EXO1\par
+Fonction bissextile(ann\'e9e: Entier): Entier\par
+Variables\par
+ann\'e9e: Entier\par
+bis: Chaine de caract\'e8res\par
+D\'e9but\par
+bis\f1\u8592?\f2\lang1036 ' '\f0\lang12\par
+Lire(ann\'e9e)\par
+Si ann\'e9e mod 4 <>0 alors\par
+\tab bis\f1\u8592?\f0\lang12 'L'ann\'e9e n'est pas bissextile'\par
+\tab Sinon\par
+\tab\tab Si ann\'e9e mod 100 = 0 alors\par
+\tab\tab\tab Si ann\'e9e mod 400 =0 alors\par
+\tab\tab\tab bis\f1\u8592?\f0\lang12 'L'ann\'e9e est bissextile'\par
+\tab\tab\tab Finsi\par
+\tab\tab Sinon\par
+\tab\tab bis\f1\u8592?\f0\lang12 'L'ann\'e9e n'est pas bissextile'\par
+\tab\tab Finsi\par
+Finsi\par
+Retourner bis\par
+Fin\par
+Algorithme EXO2\par
+Fonction nombrejours(ann\'e9e, mois: Entier): Entier\par
+Variables\par
+an, mois, nbj: Entier\par
+D\'e9but\par
+nbj\f1\u8592?\f2\lang1036 0\f0\lang12\par
+Lire (mois, an)\par
+SI an mod 4 <>0 alors \par
+\tab Si mois = 2 alors\par
+\tab\tab nbj\f1\u8592?\f0\lang12 28\par
+\tab Finsi\par
+Sinon\par
+\tab Si an mod 100 <> 0 alors \par
+\tab\tab Si mois = 2 alors\par
+\tab\tab\tab nbj\f1\u8592?\f0\lang12 29\par
+\tab\tab Finsi\par
+\tab Sinon\par
+\tab\tab Si an mod 400 = 0 alors\par
+\tab\tab\tab Si mois = 2 alors\par
+\tab\tab\tab\tab nbj\f1\u8592?\f0\lang12 29\par
+\tab\tab\tab Finsi\par
+\tab\tab Sinon\par
+\tab\tab\tab Si mois = 2 alors\par
+\tab\tab\tab\tab nbj\f1\u8592?\f0\lang12 28\par
+\tab\tab\tab Finsi\par
+\tab\tab Finsi\par
+\tab Finsi\par
+Finsi\par
+Selon mois faire\par
+\tab Cas 1 ou 3 ou 5 ou 7 ou 8 ou 10 ou 12 : nbj\f1\u8592?\f0\lang12 31\par
+\tab Cas  4 ou 6 ou 9 ou 11 : nbj\f1\u8592?\f0\lang12 30\par
+Finselon\par
+Retourner nbj\par
+Fin\par
+Algorithme EXO3\par
+Fonction datevalide(j, m, a: Entier): Entier\par
+Variables\par
+j, m, a: Entier\par
+v: Cha\'eene de caract\'e8res\par
+D\'e9but\par
+v\f1\u8592?\f2\lang1036 ' '\f0\lang12\par
+Lire(j, m, a)\par
+Si j<1 ou m<1 ou a<1 ou j>31 ou m>12  alors\par
+\tab v\f1\u8592?\f0\lang12 'La date n'est pas valide'\par
+
+\pard\li720\sa200\sl276\slmult1 Sinon\par
+\tab Si m=2 et a mod 4 <> 0 et j>28 alors\par
+\tab\tab v\f1\u8592?\f0\lang12 'La date n'est pas valide'\par
+\tab Finsi\par
+\tab Si m=2 et a mod 4 = 0 et a mod 100 = 0 et a mod 400 = 0 et j > 29 alors\par
+\tab\tab v\f1\u8592?\f0\lang12 'La date n'est pas valide' \par
+\tab Finsi\par
+\tab Si m=2 et a mod 4 = 0 et a mod 100 = 0 et a mod 400 <> 0 et j > 28 alors\par
+ \tab\tab v\f1\u8592?\f0\lang12 'La date n'est pas valide'\par
+\tab Finsi\par
+
+\pard\sa200\sl276\slmult1 Finsi\par
+Si m=1 ou m=3 ou m=5 ou m=7 ou m=8 ou m=10 ou m=12 alors\par
+\tab Si j>31 alors\par
+\tab\tab v\f1\u8592?\f0\lang12 'La date n'est pas valide'\par
+ \tab Finsi\par
+Sinon\par
+\tab Si m=4 ou m=6 ou m=9 ou m=11 alors\par
+\tab\tab Si j>30 alors \tab\par
+\tab\tab\tab v\f1\u8592?\f0\lang12 'La date n'est pas valide'\par
+\tab\tab Finsi\par
+\tab Finsi\par
+Sinon\par
+\tab v\f1\u8592?\f0\lang12 'La date est valide'\par
+Finsi\par
+Retourner v\par
+Fin\par
+Algorithme EXO4\par
+Fonction dsuiv(j, m, a: Entier): Entier \par
+ds= Cha\'eene de caract\'e8res\par
+Variables\par
+\f2\lang1036 j, m, a: Entier\par
+D\'e9but\par
+\f0\lang12 ds\f1\u8592?\f2\lang1036 ' '\par
+Lire(j, m, a)\par
+\f0\lang12 Si j<1 ou m<1 ou a<1 ou j>31 ou m>12  alors\par
+\tab ds\f1\u8592?\f2\lang1036 '\f0\lang12 La date n'est pas valide'\par
+
+\pard\li720\sa200\sl276\slmult1 Sinon\par
+\tab Si m=2 et a mod 4 <> 0 et j>28 alors\par
+\tab\tab ds\f1\u8592?\f0\lang12 'La date n'est pas valide'\par
+\tab Finsi\par
+\tab Si m=2 et a mod 4 = 0 et a mod 100 = 0 et a mod 400 = 0 et j > 29 alors\par
+\tab\tab ds\f1\u8592?\f0\lang12 'La date n'est pas valide' \par
+\tab Finsi\par
+\tab Si m=2 et a mod 4 = 0 et a mod 100 = 0 et a mod 400 <> 0 et j > 28 alors\par
+ \tab\tab ds\f1\u8592?\f0\lang12 'La date n'est pas valide'\par
+\tab Finsi\par
+
+\pard\sa200\sl276\slmult1 Finsi\par
+Si m=1 ou m=3 ou m=5 ou m=7 ou m=8 ou m=10 ou m=12 alors\par
+\tab Si j>31 alors\par
+\tab\tab ds\f1\u8592?\f0\lang12 'La date n'est pas valide'\par
+ \tab Finsi\par
+Sinon\par
+\tab Si m=4 ou m=6 ou m=9 ou m=11 alors\par
+\tab\tab Si j>30 alors \tab\par
+\tab\tab\tab ds\f1\u8592?\f0\lang12 'La date n'est pas valide'\par
+\tab\tab Finsi\par
+\tab Finsi\par
+\f2\lang1036 Finsi\par
+j\f1\u8592?j+1\par
+Si j=32 et\f0\lang12  m=1 ou m=3 ou m=5 ou m=7 ou m=8 ou m=10 ou m=12 alors\f2\lang1036\par
+\tab j\f1\u8592?1\par
+\tab m\u8592?m+1\par
+Sinon\par
+\tab Si j=31 et \f0\lang12 m=4 ou m=6 ou m=9 ou m=11 alors\par
+\tab\f2\lang1036 j\f1\u8592?1\par
+\tab m\u8592?m+1\par
+\f2\lang1036\tab Finsi\par
+\par
+\tab Si m=13 alors\par
+\tab\tab m\f1\u8592?1\par
+\tab\tab a\u8592?a+1\par
+\tab Finsi\par
+Finsi\par
+\f0\lang12 ds\f1\u8592?'Le jour suivant est: '\f2\lang1036 +\f1 j\f2\lang1036 +'/'+\f1 m\f2\lang1036 +'/'+\f1 a\par
+\f2\lang1036 Retourner ds\f1\par
+Fin\par
+\f0\lang12 Algorithme EXO5\par
+Fonction datepr\'e9c\'e9dente(j, m, a: Entier): Entier\par
+Variables\par
+\f2\lang1036 j, m, a: Entier\par
+dp: Cha\'eene de caract\'e8res\par
+D\'e9but\par
+dp\f1\u8592?\f2\lang1036 ' '\par
+Lire(j, m, a)\par
+\f0\lang12 Si j<1 ou m<1 ou a<1 ou j>31 ou m>12  alors\par
+\tab\f2\lang1036 dp\f1\u8592?\f0\lang12 'La date n'est pas valide'\par
+
+\pard\li720\sa200\sl276\slmult1 Sinon\par
+\tab Si m=2 et a mod 4 <> 0 et j>28 alors\par
+\tab\tab\f2\lang1036 dp\f1\u8592?\f0\lang12 'La date n'est pas valide'\par
+\tab Finsi\par
+\tab Si m=2 et a mod 4 = 0 et a mod 100 = 0 et a mod 400 = 0 et j > 29 alors\par
+\tab\tab\f2\lang1036 dp\f1\u8592?\f0\lang12 'La date n'est pas valide' \par
+\tab Finsi\par
+\tab Si m=2 et a mod 4 = 0 et a mod 100 = 0 et a mod 400 <> 0 et j > 28 alors\par
+ \tab\tab\f2\lang1036 dp\f1\u8592?\f0\lang12 'La date n'est pas valide'\par
+\tab Finsi\par
+
+\pard\sa200\sl276\slmult1 Finsi\par
+\f2\lang1036 j=j-1\par
+Si j=0 alors\par
+\tab j\f1\u8592?1\par
+\tab m\u8592?m-1\par
+\tab Si m=0 alors\par
+\tab\tab m\u8592?1\par
+\tab\tab a\u8592?a-1\par
+\tab\tab Si a\u8592?0 alors\par
+\tab\tab\tab\f2\lang1036 dp\f1\u8592?'Il n'y a pas de date pr\'e9c\'e9dente'\par
+\tab\tab Finsi\par
+\tab Finsi\par
+Finsi\par
+\f2\lang1036 dp\u8592?\f1 'La date pr\'e9c\'e9dente est: '\f2\lang1036 +\f1 j\f2\lang1036 +'/'+\f1 m\f2\lang1036 +'/'+\f1 a\par
+\f2\lang1036 Retourner dp\f1\par
+Fin\par
+\f0\lang12 Algorithme EXO6\par
+Fonction dd5j(j, m, a: Entier):Entier\par
+Variables\par
+\f2\lang1036 j, m, a, n: Entier\par
+d5: Cha\'eene de caract\'e8res\par
+D\'e9but\par
+Lire(j, m, a)\par
+\f0\lang12 Si j<1 ou m<1 ou a<1 ou j>31 ou m>12  alors\par
+\tab\f2\lang1036 d5\f1\u8592?\f0\lang12 'La date n'est pas valide'\par
+
+\pard\li720\sa200\sl276\slmult1 Sinon\par
+\tab Si m=2 et a mod 4 <> 0 et j>28 alors\par
+\tab\tab\f2\lang1036 d5\f1\u8592?\f0\lang12 'La date n'est pas valide'\par
+\tab Finsi\par
+\tab Si m=2 et a mod 4 = 0 et a mod 100 = 0 et a mod 400 = 0 et j > 29 alors\par
+\tab\tab\f2\lang1036 d5\f1\u8592?\f0\lang12 'La date n'est pas valide' \par
+\tab Finsi\par
+\tab Si m=2 et a mod 4 = 0 et a mod 100 = 0 et a mod 400 <> 0 et j > 28 alors\par
+ \tab\tab\f2\lang1036 d5\f1\u8592?\f0\lang12 'La date n'est pas valide'\par
+\tab Finsi\par
+
+\pard\sa200\sl276\slmult1 Finsi\par
+\par
+Si m=1 ou m=3 ou m=5 ou m=7 ou m=8 ou m=10 ou m=12 alors\par
+\tab Si j>31 alors\par
+\tab\tab\f2\lang1036 d5\f1\u8592?\f0\lang12 'La date n'est pas valide'\par
+ \tab Finsi\par
+Sinon\par
+\tab Si m=4 ou m=6 ou m=9 ou m=11 alors\par
+\tab\tab Si j>30 alors \tab\par
+\tab\tab\tab\f2\lang1036 d5\f1\u8592?\f0\lang12 'La date n'est pas valide'\par
+\tab\tab Finsi\par
+\tab Finsi\par
+\f2\lang1036 Finsi\par
+j\f1\u8592?j\f2\lang1036 +5\f3\par
+Si j\f2 >\f3 32 et\f0\lang12  m=1 ou m=3 ou m=5 ou m=7 ou m=8 ou m=10 ou m=12 alors\f2\lang1036\par
+\tab j\f1\u8592?1\par
+\tab m\u8592?m+1\par
+Sinon\par
+\tab Si j\f2\lang1036 >\f3 31 et \f0\lang12 m=4 ou m=6 ou m=9 ou m=11 alors\par
+\tab\f2\lang1036 j\f1\u8592?1\par
+\tab m\u8592?m+1\par
+\f2\lang1036\tab Finsi\par
+\par
+\tab Si m=13 alors\par
+\tab\tab m\f1\u8592?1\par
+\tab\tab a\u8592?a+1\par
+\tab Finsi\par
+Finsi\par
+\f2\lang1036 d5\u8592?'La date qu'il fera dans 5 jours\f3  est: '\f2 +\f3 j\f2 +'/'+\f3 m\f2 +'/'+\f3 a\par
+\f2 Retourner d5\f3\par
+\f0\lang12 Fin\par
+Algorithme EXO7\par
+Fonction datenj(j, m, a: Entier): Entier\par
+Variables\par
+\f2\lang1036 j, m, a, n: Entier\par
+dnj: Cha\'eene de caract\'e8res\par
+D\'e9but\par
+Lire(j, m, a)\par
+\f0\lang12 Si j<1 ou m<1 ou a<1 ou j>31 ou m>12  alors\par
+\tab\f2\lang1036 dnj\u8592?\f0\lang12 'La date n'est pas valide'\par
+
+\pard\li720\sa200\sl276\slmult1 Sinon\par
+\tab Si m=2 et a mod 4 <> 0 et j>28 alors\par
+\tab\tab\f2\lang1036 dnj\u8592?\f0\lang12 'La date n'est pas valide'\par
+\tab Finsi\par
+\tab Si m=2 et a mod 4 = 0 et a mod 100 = 0 et a mod 400 = 0 et j > 29 alors\par
+\tab\tab\f2\lang1036 dnj\f1\u8592?\f0\lang12 'La date n'est pas valide' \par
+\tab Finsi\par
+\tab Si m=2 et a mod 4 = 0 et a mod 100 = 0 et a mod 400 <> 0 et j > 28 alors\par
+ \tab\tab\f2\lang1036 dnj\f1\u8592?\f0\lang12 'La date n'est pas valide'\par
+\tab Finsi\par
+
+\pard\sa200\sl276\slmult1 Finsi\par
+Si m=1 ou m=3 ou m=5 ou m=7 ou m=8 ou m=10 ou m=12 alors\par
+\tab Si j>31 alors\par
+\tab\tab\f2\lang1036 dnj\f1\u8592?\f0\lang12 'La date n'est pas valide'\par
+ \tab Finsi\par
+Sinon\par
+\tab Si m=4 ou m=6 ou m=9 ou m=11 alors\par
+\tab\tab Si j>30 alors \tab\par
+\tab\tab\tab\f2\lang1036 dnj\f1\u8592?\f0\lang12 'La date n'est pas valide'\par
+\tab\tab Finsi\par
+\tab Finsi\par
+\f2\lang1036 Finsi\par
+j\f1\u8592?j\f2\lang1036 -n\f3\par
+\f2 Si j<0 alors\par
+\tab j\f1\u8592?1\par
+\tab m\u8592?m-1\par
+\tab Si m=0 alors\par
+\tab\tab m\u8592?1\par
+\tab\tab a\u8592?a-1\par
+\tab\tab Si a\u8592?0 alors\par
+\tab\tab\tab\f2\lang1036 dnj\f1\u8592?'Il n'y a pas de date pr\'e9c\'e9dente'\par
+\tab\tab Finsi\par
+\tab Finsi\par
+Finsi\par
+\f2\lang1036 dnj\f1\u8592?'La date \f2\lang1036 qu'il fesait il y a ',n,' jours\f3  est: ', j\f2 +' '+\f3 m\f2 +' '+\f3 a\par
+\f2 Retourner dnj\f3  \par
+Fin\f2\par
+Algorithme EXO8\par
+Fonction somdiv(n: Entier): Entier\par
+
+\pard\nowidctlpar\hyphpar0\widctlpar\sa200\sl276\slmult1\kerning1\f4 n, s: Entier\par
+Ecrire('Donnez un nombre')\par
+Lire(n)\par
+s\f1\u8592?\f4\lang1036 0\par
+Pour i\f1\u8592?\f4\lang1036 1 \'e0 n faire\par
+\tab Si n mod i = 0 alors\par
+\tab\tab s\f1\u8592?\f4\lang1036 s+i\par
+\tab\tab i\f1\u8592?\f4\lang1036 i+1\par
+\tab Finsi\par
+Finpour\par
+
+\pard\sa200\sl276\slmult1\kerning0\f0\lang12 Retourner s\par
+Fin\par
+Algorithme EXO9\par
+Fonction nbamis(n1, n2)\par
+
+\pard\nowidctlpar\hyphpar0\widctlpar\sa200\sl276\slmult1\kerning1\f4\lang1036 Variables\par
+n1, n2, c1, c2, i: Entier\par
+amis\f2 : Cha\'eene de caract\'e8res\f4\par
+D\'e9but\par
+amis\f1\u8592?\f2\lang1036 ' '\f4\par
+c1\f1\u8592?\f4\lang1036  0\par
+c2\f1\u8592?\f4\lang1036  0\par
+Lire (n1)\par
+Lire (n2)\par
+Pour i\f1\u8592?\f4\lang1036  1 \'e0 n2 div 2 faire\par
+\tab Si n1 mod i = 0 alors \par
+\tab c1\f1\u8592?\f4\lang1036  c1+i\par
+\tab Finsi\par
+Finpour\par
+Pour i\f1\u8592?\f4\lang1036  1 \'e0 n2 div 2 faire\par
+\tab Si n2 mod i=0 alors\par
+\tab c2\f1\u8592?\f4\lang1036  c2+i\par
+\tab Finsi\par
+Finpour\par
+Si c1=n2 et c2=n1 alors\par
+amis\f1\u8592?\f4\lang1036\lquote Les deux nombres sont amis\rquote\par
+Sinon\par
+amis\f1\u8592?\f4\lang1036\lquote Les deux nombres ne sont pas amis\rquote\tab\par
+Finsi\par
+Retourner amis\par
+Fin\par
+
+\pard\sa200\sl276\slmult1\kerning0\f0\lang12 Algorithme EXO10\par
+Fonction nbparfait(n: Entier): Entier\par
+
+\pard\nowidctlpar\hyphpar0\widctlpar\sa200\sl276\slmult1\kerning1\f4\lang1036 Variables\par
+n, s: Entier\par
+parfait\f2 : Cha\'eene de caract\'e8res\f4\par
+D\'e9but\par
+Lire(n)\par
+s\f1\u8592?\f4\lang1036 0\par
+parfait\f1\u8592?\f2\lang1036 ' '\f4\par
+Pour i\f1\u8592?\f4\lang1036 1 \'e0 n faire\par
+\tab Si n mod i = 0 alors\par
+\tab\tab s\f1\u8592?\f4\lang1036 s+i\par
+\tab\tab i\f1\u8592?\f4\lang1036 i+1\par
+\tab Finsi\par
+Finpour\par
+Si n=s alors\par
+\tab parfait\f1\u8592?\f4\lang1036 'Le nombre est parfait'\par
+\tab Sinon\par
+\tab\tab parfait\f1\u8592?\f4\lang1036 'Le nombre n'est pas parfait'\par
+Finsi\par
+Retourner parfait\par
+Fin\par
+
+\pard\sa200\sl276\slmult1\kerning0\f0\lang12 Algorithme EXO11\par
+Fonction nbpremier(n: Entier): Entier\kerning1\f4\lang1036\par
+
+\pard\nowidctlpar\hyphpar0\widctlpar\sa200\sl276\slmult1 Variables\par
+premier: Cha\'eene de caract\'e8res\par
+n, s : Entier\par
+D\'e9but\par
+Lire (n)\par
+premier\f1\u8592?\f2\lang1036 ' '\f4\par
+s\f1\u8592?\f4\lang1036  0\par
+Pour i\f1\u8592?\f4\lang1036  1 \'e0 n faire\par
+\tab Si n%n-i=0 alors\par
+\tab s\f1\u8592?\f4\lang1036  n%n-i \par
+\tab Finsi\par
+Finpour\par
+Si n=s alors\par
+\tab premier\f1\u8592?\f4\lang1036\lquote Le nombre est premier\rquote\par
+\tab Sinon\par
+\tab\tab premier\f1\u8592?\f4\lang1036\lquote Le nombre n\rquote est pas premier\lquote\par
+Finsi\par
+Retourner premier\par
+Fin\par
+
+\pard\sa200\sl276\slmult1\kerning0\f0\lang12 Algorithme EXO12\par
+F(nani!!)\par
+}
+ 

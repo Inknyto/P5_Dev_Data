@@ -1,0 +1,286 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat{\fonttbl{\f0\froman\fprq2\fcharset0 Calibri;}{\f1\fnil\fcharset1 Cambria Math;}{\f2\fnil\fcharset0 Cambria Math;}}
+{\*\generator Riched20 10.0.19041}{\*\mmathPr\mmathFont1\mwrapIndent1440 }\viewkind4\uc1 
+\pard\nowidctlpar\hyphpar0\widctlpar\sa200\sl276\slmult1\kerning1\f0\fs22\lang1036 Partie 3:\par
+Algorithme EXO1\par
+n, s: Entier\par
+Ecrire('Donnez un nombre')\par
+Lire(n)\par
+s\f1\u8592?\f0\lang1036 0\par
+Pour i\f1\u8592?\f0\lang1036 1 \'e0 n faire\par
+\tab Si n mod i = 0 alors\par
+\tab\tab s\f1\u8592?\f0\lang1036 s+i\par
+\tab\tab i\f1\u8592?\f0\lang1036 i+1\par
+\tab Finsi\par
+Finpour\par
+Si n=s alors\par
+\tab Ecrire('Le nombre est parfait')\par
+\tab Sinon\par
+\tab\tab Ecrire('Le nombre n'est pas parfait')\par
+Finsi\par
+Fin\par
+Algorithme EXO2\par
+Variables \par
+n, s: Entier\par
+D\'e9but\par
+s\f1\u8592?\f0\lang1036 0\par
+Ecrire('Veuillez donner un nombre')\par
+Lire(n)\par
+Pour i\f1\u8592?\f0\lang1036 0 \'e0 n faire\par
+\tab s\f1\u8592?\f0\lang1036 n+(n-1)\par
+Finpour\par
+Ecrire('La somme des entiers jusqu'\'e0 ce nombre est: ',s)\par
+Fin\par
+Algorithme EXO3\par
+Variables \par
+a, b, r, i R\'e9el\par
+D\'e9but\par
+Ecrire('Entrez deux nombres')\par
+Lire(a, b)\par
+i\f1\u8592?\f0\lang1036 0\par
+Tant que a>=b faire\tab\tab\tab\par
+a\f1\u8592?\f0\lang1036 a-b\par
+i\f1\u8592?\f0\lang1036 i+1\par
+Fintantque\par
+Ecrire('Le r\'e9sultat de la divisio est de: ', i)\par
+Fin\par
+Algorithme EXO4\par
+Variables \par
+a, b: Entier\par
+D\'e9but\par
+Ecrire('Entrez deux nombres')\par
+Lire(a, b)\par
+Tant que a<>b faire\par
+\tab Si a>b alors\par
+\tab a\f1\u8592?\f2\lang1036 a-b\par
+\tab Sinon\par
+\tab\tab b\u8592?b-a\par
+\tab Finsi\f0\par
+Fintantque\par
+Ecrire('Le pgcd est: ', a)\par
+Fin\par
+Algorithme EXO5\par
+Variables\par
+a , b ,c ,d : Entier\par
+D\'e9but\par
+Ecrire (' Entrez deux nombres ')\par
+Lire ( a,b )\par
+c\f1\u8592?\f0\lang1036 a \par
+d\f1\u8592?\f0\lang1036 b \par
+Tant que a < > b faire\par
+ \tab Si a > b alors\par
+\tab b <- b+d\par
+\tab Sinon\par
+\tab\tab a\f1\u8592?\f0\lang1036 a+c  \par
+\tab Finsi\par
+  Fintantque\par
+Ecrire (' Le PPCM est de ' , c , ' et ' , d , 'est : ' , a ) ;\par
+Fin\par
+Algorithme EXO6\par
+Variables \par
+s, p\~: Entier\par
+D\'e9but\par
+s<-0\par
+Tant que p<>0 faire\par
+\tab Ecrire(\lquote Entrez le prix d\rquote un article\rquote )\par
+\tab Lire(p)\par
+\tab s<-p\par
+Fintantque\par
+Ecrire(\lquote La somme des prix des articles est\~:\rquote  , s)\par
+Fin\par
+Algorithme EXO7\par
+Variables \par
+ns, nn, i, c\~: R\'e9el  #nombre sup\'e9rieur, nouveau nombre, position, compteur\par
+D\'e9but\par
+nn<-0\par
+an<-0\par
+i<-0\par
+c\f1\u8592?\f2\lang1036 0\f0\par
+Pour i\f1\u8592?\f2\lang1036 1 \'e0 10 faire\f0\par
+\tab Ecrire(\lquote Entrez un nombre\rquote )\par
+\tab Lire(nn)\par
+\tab c\f1\u8592?\f2\lang1036 c+1\f0\par
+\tab Tant que nn>ns faire\par
+\tab ns\f1\u8592?\f0\lang1036 nn\tab\par
+\tab p\f1\u8592?\f2\lang1036 c\par
+\tab Fintantque\par
+Finpour\par
+Ecrire('Le nombre sup\'e9rieur est ', ns,'et est le ',p,' i\'e8me nombre de la liste)\par
+Fin\f0\par
+Algorithme EXO8\par
+Variables\par
+e1, e2, i\~: Entier\par
+D\'e9but\par
+Ecrire(\lquote Joueur 1, veuillez entrer un entier\rquote )\par
+Lire(e1)\par
+i<-0\par
+Ecrire(\lquote Joueur 2, \'e0 vous de deviner\~!\rquote )\par
+Tant que e1<> e2 faire\par
+\tab Lire (e2)\par
+\tab Ecrire(\lquote Mauvais num\'e9ro, veuillez r\'e9essayer\~!\rquote )\par
+\tab i<-i+1\par
+Fintantque\par
+Si e1=e2 alors\par
+
+\pard\nowidctlpar\hyphpar0\widctlpar\fi720\sa200\sl276\slmult1 Ecrire(\lquote Vous avez trouv\'e9\~apr\'e8s \lquote ,i, \rquote tentatives!\rquote )\par
+
+\pard\nowidctlpar\hyphpar0\widctlpar\sa200\sl276\slmult1 Finsi\par
+Fin\par
+Algorithme EXO9\par
+Variables \par
+N, n1, n2, i\~: Entier\par
+ch\~: cha\'eene de caract\'e8res\par
+D\'e9but\par
+Ecrire(\lquote Veuillez entrer le nombre d\rquote entiers \'e0 saisir entre 10 et 50\rquote )\par
+Lire(N)\par
+i<- 0\par
+ch<- \lquote  \rquote\par
+n2<-0\par
+Tant que i<N faire\par
+
+\pard\nowidctlpar\hyphpar0\widctlpar\fi720\sa200\sl276\slmult1 Ecrire(\lquote Veuillez entrer un entier\rquote )\par
+Lire (n1)\par
+Si n1>n2 alors\par
+
+\pard\nowidctlpar\hyphpar0\widctlpar\fi720\li720\sa200\sl276\slmult1 n2<-n1\par
+ch<-ch+\rquote  ' +n2\par
+Sinon \par
+\tab ch\f1\u8592?\f2\lang1036  ' '\f0\par
+
+\pard\nowidctlpar\hyphpar0\widctlpar\sa200\sl276\slmult1 Finsi\par
+Ecrire(\lquote La plus longue s\'e9quence croissante est\~: \rquote ch)\par
+Fin\par
+Algorithme EXO10\par
+Variables\par
+n1, n2, c1, c2, i: Entier\par
+D\'e9but\par
+c1\f1\u8592?\f0\lang1036  0\par
+c2\f1\u8592?\f0\lang1036  0\par
+Ecrire(\lquote Entrez le premier nombre\rquote )\par
+Lire (\lquote n1\rquote )\par
+Ecrire(\lquote Entrez le deuxi\'e8me nombre\rquote )\par
+Lire (\lquote n2\rquote )\par
+Pour i\f1\u8592?\f0\lang1036  1 \'e0 n2 div 2 faire\par
+\tab Si n1 mod i = 0 alors \par
+\tab c1\f1\u8592?\f0\lang1036  c1+i\par
+\tab Finsi\par
+Finpour\par
+Pour i\f1\u8592?\f0\lang1036  1 \'e0 n2 div 2 faire\par
+\tab Si n2 mod i=0 alors\par
+\tab c2\f1\u8592?\f0\lang1036  c2+i\par
+\tab Finsi\par
+Finpour\par
+Si c1=n2 et c2=n1 alors\par
+Ecrire(\lquote Les deux nombres sont amis\rquote )\par
+Sinon\par
+Ecrire(\lquote Les deux nombres ne sont pas amis\rquote )\tab\par
+Finsi\par
+Fin\par
+Algorithme EXO11\par
+Variables\par
+n, s : Entier\par
+D\'e9but\par
+Faire\par
+Ecrire(\lquote Veuillez entrer un nombre\rquote )\par
+Lire (n)\par
+s\f1\u8592?\f0\lang1036  0\par
+Pour i\f1\u8592?\f0\lang1036  1 \'e0 n faire\par
+\tab Si n%n-i=0 alors\par
+\tab s\f1\u8592?\f0\lang1036  n%n-i \par
+\tab Finsi\par
+Finpour\par
+Si n=s alors\par
+\tab Ecrire(\lquote Le nombre est premier\rquote )*\par
+\tab Sinon\par
+\tab\tab Ecrire(\lquote Le nombre n\rquote est pas premier\lquote )\par
+Finsi\par
+Fin\par
+Algorithme EXO12\par
+n, s: Entier\par
+Ecrire('Donnez un nombre')\par
+Lire(n)\par
+s\f1\u8592?\f0\lang1036 0\par
+Pour i\f1\u8592?\f0\lang1036 1 \'e0 n faire\par
+\tab Si n mod i = 0 alors\par
+\tab\tab s\f1\u8592?\f0\lang1036 s+i\par
+\tab\tab i\f1\u8592?\f0\lang1036 i+1\par
+\tab Finsi\par
+Finpour\par
+Si n=s alors\par
+\tab Ecrire('Le nombre est parfait')\par
+\tab Sinon\par
+\tab\tab Ecrire('Le nombre n'est pas parfait')\par
+Finsi\par
+Fin\par
+Algorithme EXO13\par
+Variables\par
+i, n, nbent, nnprem : Entier\par
+ch\~: Chaine de caract\'e8res\par
+D\'e9but\par
+i\f1\u8592?\f0\lang1036  0\par
+ch\f1\u8592?\f0\lang1036  \lquote  \lquote\par
+nnprem\f1\u8592?\f0\lang1036  0\par
+nbent\f1\u8592?\f0\lang1036  0\par
+Faire\par
+Ecrire(\lquote Veuillez entrer un nombre\rquote )\par
+Lire (n)\par
+nbent\f1\u8592?\f0\lang1036  nbent+1\par
+Pour i\f1\u8592?\f0\lang1036  1 \'e0 n faire\par
+\tab Si n%n-i=0 alors\par
+\tab s\f1\u8592?\f0\lang1036  n%n-i \par
+\tab Finsi\par
+Finpour\par
+Si n=s alors\par
+\tab i\f1\u8592?\f0\lang1036  i+1\par
+\tab ch\f1\u8592?\f0\lang1036  ch+ \lquote  \lquote +n\par
+\tab  nnprem= nnprem+1\par
+Finsi\par
+Ecrire(\lquote Le nombre d\rquote entiers saisis est\~: \rquote , nbent, \lquote Le nombre de nombres premiers est de\~:\rquote , nnprem, \lquote Les nombres premiers sont\~: \rquote  ch )\par
+Tant que n<> 0\par
+Fin\par
+Algorithme EXO14\par
+Variables\par
+n, s, N : Entier\par
+D\'e9but\par
+Ecrire(\lquote Veuillez entrer un entier positif\rquote )\par
+Lire(N)\par
+Pour i\f1\u8592?\f0\lang1036 i \'e0 N faire\par
+Faire\par
+Ecrire(\lquote Veuillez entrer un nombre\rquote )\par
+Lire (n)\par
+s\f1\u8592?\f0\lang1036  0\par
+Pour i\f1\u8592?\f0\lang1036  1 \'e0 n faire\par
+\tab Si n%n-i=0 alors\par
+\tab s\f1\u8592?\f0\lang1036  n%n-i \par
+\tab Finsi\par
+Finpour\par
+Si n=s alors\par
+\tab ch\f1\u8592?\f0\lang1036  ch + \lquote  \rquote +n\par
+\tab Sinon\par
+\tab\tab Ecrire(\lquote Le nombre n\rquote est pas premier\lquote )\par
+Finsi\par
+Finpour\par
+Ecrire(\lquote Les nombres premiers dans cet intervalle sont\~:\rquote  , ch)\par
+Fin\par
+Algorithme EXO16(sapin)\par
+Variables \par
+hf, ht, lr, m, s, lc: Entier\par
+D\'e9but\par
+Ecrire('Quel symbole souhaitez-vous utiliser pour dessiner le sapin?')\par
+Lire(s)\par
+Ecrire('Quelle est la hauteur des feuilles?')\par
+Lire(hf)\par
+Ecrire('Quelle est la hauteur du tronc?')\par
+Lire(ht)\par
+Ecrire('Quelle est la largeur des racines? ')\par
+Lire(lr)\par
+lc\f1\u8592?\f2\lang1036 (lr div 2)-1\par
+\f0 Pour i\f1\u8592?\f2\lang1036 1 \'e0 hf+1 faire\par
+\tab Ecrire((hf-1)*' ', s *(2*i-1)\par
+Finpour\par
+Pour j\u8592?1 \'e0 ht+1 faire\par
+\tab Ecrire(m*' ', s)\par
+Finpour\par
+\tab Ecrire(l*' ',(2*hf-6)*s)\par
+Fin\f0\par
+}
+ 
