@@ -1,0 +1,51 @@
+body {
+    background-image: url("parchemin2.jpg");
+}
+section h1 {
+    color: black;
+    text-align: center;
+    border: solid;
+    font-size: 3.0em;
+    background: red; 
+    width: 75%; 
+    margin: 40px auto 20px auto;
+}
+section h2{
+    font-style: italic;
+    border: 0cm;
+}
+header{
+    border: solid;
+
+}
+h2, h1 {
+    color: blue;
+    font-style: normal;
+    background-color: goldenrod;
+    border: solid; 
+    margin: 10px 40px 10px 40px; 
+    padding : 10px 30px; 
+}
+p {
+    text-indent: 16px;
+    text-align: justify;
+}
+.surligne {
+    background-color: yellow;
+}
+#cadre1 {
+    border-style: solid;
+    font-style: italic;
+    font-size: 0.5em;
+    background-color: rgb(210,210,210);
+}
+#cadre2 {
+    border-style:dashed;
+    background-color: rgba(0, 0, 255, 0.15);
+}
+p::first-letter {
+    font-size: 1.8em;
+    color: red;
+    font-weight: bolder;
+}
+

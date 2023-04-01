@@ -1,0 +1,131 @@
+body{
+  Margin-left:450px;
+  font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  color: '#777';
+  background-color:#ebebeb;
+  width: '960px';
+  font-size: '18px';
+
+  text-align: left;
+  color: black;
+  background-color: #bcc5da;
+  height: 431px;
+  width: 819px;
+  font-size: 18px;
+  margin-bottom: 15px;
+  margin-right: 550px;
+  float: right;
+margin-left: 10px;
+  
+  margin-top: 60px;
+  border: solid;
+  height: 453px;
+}
+html{
+  background-color: aliceblue;
+}
+#nav{
+  text-align: center;
+  color: grey;
+  background-color: #ebebeb;
+  height: 80px;
+  width: 900px;
+  font-size: 18px;
+  margin-bottom: 15px;
+
+}
+
+section {
+  text-align: left;
+  color: black;
+  background-color: #bcc5da;
+  height: 379px;
+  width: 600px;
+  font-size: 18px;
+  margin-bottom: 15px;
+  margin-right: 14px;
+  float: left;
+  margin-left: 9px;
+  white-space: -moz-pre-space;
+  margin-top: 60px;
+  border: solid;
+  /*! height: ; */
+  margin-top: 13px;
+}
+
+aside {
+  
+  text-align: center;
+  color: black;
+  background-color: #bcc5da;
+  height: 379px;
+  width: 174px;
+  font-size: 18px;
+  margin-bottom: 15px;
+  float: left;
+  margin-left: 10px;
+  margin-top: 13px;
+  border: solid;
+}
+
+
+div:nth-child(5){
+  text-align: center;
+  color: grey;
+  background-color: white;
+  height: 60px;
+  width: 800px;
+  font-size: 18px;
+  margin-bottom: 15px;
+  float:none;
+}
+
+#article {
+  background-color: #bcc5da;
+  color: #ebebeb;
+  margin-left: 14px;
+  margin-right: 0px;
+  width: 570px;
+  height: 444px;
+  text-align: left;
+  border: solid;
+  border-color: black;
+}
+
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#h {
+  background-color: #bcc5da;
+  color: #000;
+  text-align: center;
+  margin-left: 18px;
+  margin-right: 10px;
+  width: 165px;
+  height: 219px;
+  margin-bottom: 26px;
+  margin-top: -20px;
+  float: left;
+  border: solid;
+  text-overflow: clip;
+}
+#nom{
+  tab-size: 10px;
+}
+header {
+  background-color: #bcc5da;
+  color: #000;
+  text-align: center;
+  margin-left: 18px;
+  margin-right: 10px;
+  margin-top: 6px;
+  width: 563px;
+  height: 43px;
+  text-align: left;
+  border: solid;
+}
+

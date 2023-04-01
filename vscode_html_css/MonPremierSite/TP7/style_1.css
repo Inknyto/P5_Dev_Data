@@ -1,0 +1,71 @@
+/* Googlefont Poppins CDN Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing:border-box;
+}
+.sidebar-button{
+  margin-top: 150px;
+  margin-left: -5px;
+  position: fixed;
+}
+.logo_name{
+  font-size: 120px;
+  position: fixed;
+  margin-left: 750px;
+}
+.content{
+    
+  margin-left: 564px;
+  margin-top: 53px;
+  font-size: 14px;
+  text-align: justify;
+  width: 717px;
+ 
+}
+.button{
+  background-color: #e34ce8;
+  height: 32px;
+  color: white;
+  padding: 6px;
+  border-radius: 10px;
+  position: fixed;
+  margin-left: 861px;
+  margin-top: 192px;
+  font-size: 16px;
+}
+
+.listtoindent{
+  margin-left: 30px;
+}
+.home-section nav {
+    height: 282px;
+    background: #0a2558;
+    width: 100%;
+    left: 0px;
+    z-index: 100;
+    padding: 0 20px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
+    color: white;
+}
+
+nav .sidebar-button i{
+  font-size: 35px;
+  margin-right: 10px;
+  position: absolute;
+  color:white;
+  margin-top: -134px;
+}
+.lorem{
+    font-size: 18px;
+    margin-left: 613px;
+    margin-top: 152px;
+    position: fixed;
+}
+
+
+
+

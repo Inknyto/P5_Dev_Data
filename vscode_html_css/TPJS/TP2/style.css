@@ -1,0 +1,38 @@
+html{
+    background-color: #fff;
+}
+
+body{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: whitesmoke;
+}
+.buttons{
+    display: grid;
+    justify-items: center;
+    align-self: center;
+    background-color: whitesmoke;
+}
+.gauche, .droite{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    height: 300px;
+    background-color: #fff;
+    margin: 10px;
+    padding: 20px;
+    justify-content: start;
+}
+
+
+tc{
+    width: 75%;
+    padding: 10px;
+    border-radius: 5px;
+    height: 20%;
+}
+
+tc:hover{
+    background-color: #1700ff;
+    color: white;
+    
+}

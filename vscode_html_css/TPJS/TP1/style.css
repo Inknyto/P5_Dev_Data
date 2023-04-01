@@ -1,0 +1,53 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+
+body{
+   
+}
+
+#container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+#header{
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: #9ec962;
+    gap: 10px;
+    color: white;
+    padding: 10px;
+    height: 15px;
+}
+
+
+body{
+    background: #7bdbf3;
+    display: grid;
+}
+
+.component {
+    border: 1px solid #ccc;
+    display: grid;
+}
+
+
+.plus{
+    font-weight: bold;
+}
+
+.btnajouter{
+    background-color:#9ec962;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    justify-self: end;
+}
+
+
+textarea{
+    height: 250px;
+}
+
+

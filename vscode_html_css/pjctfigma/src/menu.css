@@ -1,0 +1,39 @@
+@media screen and (max-width: 768px) {
+    .navbar__menu {
+      display: none;
+    }
+  }
+
+
+  
+  input[type="checkbox"] {
+    display: none;
+  }
+  
+  input[type="checkbox"] + label {
+    display: block;
+    cursor: pointer;
+  }
+  
+  input[type="checkbox"]:checked ~ .navbar__menu {
+    display: block;
+  }
+  
+
+
+  input[type="checkbox"] + label .bi-list {
+    display: block;
+  }
+  
+  input[type="checkbox"] + label .bi-x-lg {
+    display: none;
+  }
+  
+  input[type="checkbox"]:checked + label .bi-list {
+    display: none;
+  }
+  
+  input[type="checkbox"]:checked + label .bi-x-lg {
+    display: block;
+  }
+  

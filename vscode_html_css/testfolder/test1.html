@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="TPJS/TP2/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="gauche">
+        <table>
+            <tr>
+                <td>Mon Premier</td>
+                <td>Mon Deuxieme</td>
+                <td>Mon Troisieme</td>
+                <td>Mon Quatrieme</td>
+            </tr>
+        </table>
+    </div>
+    <div class="buttons">
+        <button id="moveRightBtn">&gt;&gt;</button>
+        <button id="moveLeftBtn" disabled>&lt;&lt;</button>
+    </div>
+    <div class="droite"></div>
+</body>
+
+<script>
+    // Get references to the relevant DOM elements
+    const leftDiv = document.querySelector('.gauche');
+    const rightDiv = document.querySelector('.droite');
+    const moveRightBtn = document.querySelector('#moveRightBtn');
+    const moveLeftBtn = document.querySelector('#moveLeftBtn');
+    const leftTable = leftDiv.querySelector('table');
+    const rightTable = document.createElement('table');
+    rightDiv.appendChild(rightTable);
+
+    // Add event listeners to the cells in the left table
+    const leftCells = leftTable.querySelectorAll('td');
+    leftCells.forEach(cell => {
+        cell.addEventListener('mouseover', () => {
+            cell.classList.add('selected');
+        });
+        cell.addEventListener('mouseout', () => {
+            cell.classList.remove('selected');
+        });
+    });
+
+    // Add event listener to the move right button
+    moveRightBtn.addEventListener('click', () => {
+        const selectedCells = leftTable.querySelectorAll('.selected');
+        selectedCells.forEach(cell => {
+            rightTable.appendChild(cell);
+            cell.classList.remove('selected');
+        });
+        updateButtonStates();
+    });
+
+    // Add event listener to the move left button
+    moveLeftBtn.addEventListener('click', () => {
+        const selectedCells = rightTable.querySelectorAll('.selected');
+        selectedCells.forEach(cell => {
+            leftTable.appendChild(cell);
+            cell.classList.remove('selected');
+        });
+        updateButtonStates();
+    });
+
+    // Update the button states based on the contents of the right table
+    function updateButtonStates() {
+        if (rightTable.children.length > 0) {
+            moveLeftBtn.disabled = false;
+        } else {
+            moveLeftBtn.disabled = true;
+        }
+        if (leftTable.children.length > 0) {
+            moveRightBtn.disabled = false;
+        } else {
+            moveRightBtn.disabled = true;
+        }
+    }
+
+    // Initialize the button states
+    updateButtonStates();
+</script>
+
+</html>

@@ -1,0 +1,8 @@
+creer dynamiquement le tableau avec javascript. 
+les éléments du tableau seront créés avec javascript. 
+les paragraphes seront créés dynamiquement et leur valeur contiendra les valeurs contenues dans le tableau. 
+Il seront alors rangés dans la partie gauche dès leur création. 
+les boutons suivront le processus normal. 
+
+si je selectionnel'un, les autres ne doivent pad être selectinnables. 
+
